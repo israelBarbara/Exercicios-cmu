@@ -117,6 +117,7 @@ namespace ExerciciosCMU.Domain.Services
         {
             try
             {
+                if (listNumber <= 0) return new APIMessage(HttpStatusCode.BadRequest, "Numero divisor ser maior que 0");
                 List<List<int>> listas = new List<List<int>>();
 
                 for (int i = 0; i < array.Count; i += listNumber)
